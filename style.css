@@ -120,3 +120,20 @@ footer ul{list-style:none;padding:0;display:grid;gap:10px;font-size:.94rem}foote
 .nav ul{display:none;position:absolute;top:80px;left:0;right:0;background:var(--navy);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--midnight)}.nav ul.open{display:flex}
 .grid4,.grid5,.fg,form,.facts{grid-template-columns:1fr}.brand{font-size:1.3rem}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+/* desktop-only column ratios so phones can stack (inline styles were beating the media query) */
+.split.c{margin-top:40px}
+@media(min-width:981px){.split.c{grid-template-columns:.85fr 1.15fr}.two.t{grid-template-columns:.9fr 1.1fr}}
+.info span{overflow-wrap:anywhere}
+/* one-question-at-a-time form */
+form.steps{grid-template-columns:1fr;gap:14px}
+form.steps fieldset{border:0;padding:0;margin:0;min-width:0;display:grid;gap:10px}
+form.steps legend{font:700 1.25rem var(--body);color:var(--navy);padding:0;margin-bottom:10px}
+form.steps input,form.steps select,form.steps textarea{font-size:1.05rem;padding:16px}
+form.steps textarea{min-height:120px}
+form.steps .bar{height:4px;background:var(--line)}
+form.steps .bar i{display:block;height:100%;width:0;background:var(--navy);transition:width .3s}
+form.steps .cnt{font:500 .72rem var(--mono);color:var(--mid);margin:0}
+form.steps .err{color:#a13030;font-size:.9rem;min-height:1.2em;margin:0}
+form.steps .nav2{display:flex;gap:12px}
+form.steps .hp{position:absolute;left:-9999px;width:1px;height:1px}
+form.steps [hidden]{display:none}
