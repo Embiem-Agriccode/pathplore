@@ -9,7 +9,7 @@ $$('.rv').forEach(e=>io.observe(e));
 const sl=$$('.slide');if(sl.length){let i=0;const go=n=>{i=(n+sl.length)%sl.length;sl.forEach((s,k)=>s.classList.toggle('on',k==i));$('#cnt').textContent=`0${i+1} / 0${sl.length}`};
 $('#prev').onclick=()=>go(i-1);$('#next').onclick=()=>go(i+1);setInterval(()=>go(i+1),8000)}
 // enrollment form: one question at a time, saved to Google Sheet
-const WA='2347026248749',SHEET_URL='https://script.google.com/macros/s/AKfycbxh_2PayVW5gx-gq73iGySCf8abnO5Smi9ApOy0b0-Rpe8dDtBZnooyRnqkjfNGDAuM/exec';// paste your Apps Script web app URL between the quotes
+const WA='2347026248749',SHEET_URL='https://script.google.com/macros/s/AKfycbzEwnfF_c8YxCTpJCDJ0YpL_rdGJFkAIS8vObqJb5CpBdJ5BikHr5XBHvjQK_-33o4s/exec';// paste your Apps Script web app URL between the quotes
 const F=$('#form');if(F){const S=$$('#form [data-s]'),bar=$('#form .bar i'),cnt=$('#form .cnt'),err=$('#form .err'),nx=$('#form .next'),bk=$('#form .back');let k=0,busy=false;
 const show=(n,focus)=>{k=n;S.forEach((s,i)=>s.hidden=i!=n);bar.style.width=(n+1)/S.length*100+'%';cnt.textContent=`Question ${n+1} of ${S.length}`;bk.hidden=!n;nx.textContent=n==S.length-1?'Send inquiry':'Next';err.textContent='';if(focus)S[n].querySelector('input,select,textarea').focus()};
 const ok=()=>{const f=S[k].querySelector('input,select,textarea');if(f.checkValidity())return true;err.textContent=f.type=='email'?'Enter a valid email address, like name@example.com.':'Fill this in to continue.';f.focus();return false};
