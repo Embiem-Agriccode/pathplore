@@ -137,3 +137,9 @@ form.steps .err{color:#a13030;font-size:.9rem;min-height:1.2em;margin:0}
 form.steps .nav2{display:flex;gap:12px}
 form.steps .hp{position:absolute;left:-9999px;width:1px;height:1px}
 form.steps [hidden]{display:none}
+
+/* Pathplore brand book v1.0: official palette and logo */
+:root{--navy:#0F1B2D;--gold:#E3C97F;--mist:#DCE5EE}
+.brand{gap:0;line-height:0}
+.brand-logo{display:block;width:140px;height:auto;margin:-8px 0}
+footer .brand-logo{width:160px;margin:0}
